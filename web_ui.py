@@ -140,9 +140,9 @@ with st.sidebar:
 
     st.divider()
     st.markdown("### 系统状态")
-    st.info("🧠 架构：上帝视角 + 长文本自动缓存\n\n🛡️ 权限：已启用双层安全隔离")
+    st.info("🧠 架构：全局视角 + 长文本自动缓存\n\n🛡️ 权限：已启用双层安全隔离")
 
-st.title("✈️ 波音 OPT 全局智能专家 ")
+st.title("✈️ 波音 OPT 全局搜索 ")
 
 # 尝试加载整本书籍
 full_document_text = load_full_document()
@@ -153,7 +153,7 @@ else:
     if "messages" not in st.session_state:
         st.session_state.messages = [
             {"role": "assistant",
-             "content": "我已经把整本 OPT 说明书装进脑子里了！随便问，我能联系整本书的上下文回答你。"}]
+             "content": "能联系整本OPT说明书给出答案。"}]
 
     for msg in st.session_state.messages:
         with st.chat_message(msg["role"]):
